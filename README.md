@@ -19,6 +19,6 @@ Seeing that our language is
 Σ = a,b,c
 we will implement the automaton using q states, after designing it this is the result
 
-![Automata](https://github.com/Zathiald/automaton/assets/111139805/b2e3f395-50c1-47d2-983d-f324f3e0d6cb)
+![Automata evidence 1](https://github.com/Zathiald/automaton/assets/111139805/5dd46a2c-f45b-4341-9380-eff2b9601d73)
 
 For further implementation are goint to transcribe the automaton to a Regular Expression (R.E) 
