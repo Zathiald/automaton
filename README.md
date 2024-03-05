@@ -19,4 +19,4 @@ Seeing that our language is
 Σ = a,b,c
 we will implement the automaton using q states, after designing it this is the result
 
-<span>![</span><span>Imagen de Automaton</span><span>]</span><span>(</span><span>https://github.com/Zathiald/automaton/blob/main/Automata.png</span><span>)</span>
+![Automata](https://github.com/Zathiald/automaton/assets/111139805/b2e3f395-50c1-47d2-983d-f324f3e0d6cb)
