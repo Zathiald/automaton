@@ -13,4 +13,10 @@ although there is a catch as there are three rules to follow
 Seeing as we only have three letters in our language it would be better to use a 
 non-deterministic finite automaton (NFA) for this problem, as it can give us more flexibility and links
 
+## Design
 
+Seeing that our language is 
+Σ = a,b,c
+we will implement the automaton using q states, after designing it this is the result
+
+<span>![</span><span>Imagen de Automaton</span><span>]</span><span>(</span><span>https://github.com/Zathiald/automaton/blob/main/Automata.png</span><span>)</span>
