@@ -21,6 +21,7 @@ we will implement the automaton using q states, after designing it this is the r
 
 ![Automata evidence 1](https://github.com/Zathiald/automaton/assets/111139805/5dd46a2c-f45b-4341-9380-eff2b9601d73)
 
-For further implementation are goint to transcribe the automaton to a Regular Expression (R.E) 
+For further implementation are goint to transcribe the automaton to a Regular Expression (R.E):
+
 <strong>^(?!.*abc)(?!.*bba).*bc$</strong>
 
