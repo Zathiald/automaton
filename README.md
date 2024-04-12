@@ -46,7 +46,6 @@ The automaton works in the following manner:
 | Q7             | C     | Q0          |
 
 
-
 For further implementation are goint to transcribe the automaton to a Regular Expression (R.E):
 
 <strong>^(?!.*abc)(?!.*bba).*bc$</strong>
@@ -85,6 +84,9 @@ The complexity for this system is O(n), that is because our regression system ne
 ## Testing
 The testing for this automaton is written on the file <strong>automaton_test.pl</strong>, but these were the results for it
 ![Automaton testing complete](https://github.com/Zathiald/automaton/assets/111139805/aeaa37f4-d924-4965-8690-beae39e9e860)
+
+## Other Implementations
+This automaton, altough functional, can certainly be improved, for example there are lenguages like Python,Java or Scala that could let me implement different algorithms and test them thoroughly and automatically, instead of having to first create the automaton, test by hand, then pass it over to prolog and test there if it works.
 
 ## References
 These references were provided thanks to the documents in which the automatons are explained.
