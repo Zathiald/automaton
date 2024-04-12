@@ -27,23 +27,25 @@ The automaton works in the following manner:
 
 | Starting State | Input | | Final State |
 | -------------- | ------| | ----------- |
-| Q0 | A | | Q1 |
-| Q0 | B | | Q4 |
-| Q0 | C | | Q0 |
-| Q1 | A | | Q1 |
-| Q1 | B | | Q2 |
-| Q1 | C | | Q0 |
-| Q2 | A | | Q1 |
-| Q2 | C | | Q3 |
-| Q4 | A | | Q1 |
-| Q4 | B | | Q5 |
-| Q4 | C | | Q7 |
-| Q5 | A | | Q6 |
-| Q5 | B | | Q4 |
-| Q5 | C | | Q7 |
-| Q7 | A | | Q1 |
-| Q7 | B | | Q4 |
-| Q7 | C | | Q0 |
+|     Q0         |   A   | |     Q1      |
+|     Q0         |   B   | |     Q4      |
+|     Q0         |   C   | |     Q0      |
+|     Q1         |   A   | |     Q1      |
+|     Q1         |   B   | |     Q2      |
+|     Q1         |   C   | |     Q0      |
+|     Q2         |   A   | |     Q1      |
+|     Q2         |   C   | |     Q3      |
+|     Q4         |   A   | |     Q1      |
+|     Q4         |   A   | |     Q1      |
+|     Q4         |   B   | |     Q5      |
+|     Q4         |   C   | |     Q7      |
+|     Q5         |   A   | |     Q6      |
+|     Q5         |   B   | |     Q4      |
+|     Q5         |   C   | |     Q7      |
+|     Q7         |   A   | |     Q1      |
+|     Q7         |   B   | |     Q4      |
+|     Q7         |   C   | |     Q0      |
+
 
 For further implementation are goint to transcribe the automaton to a Regular Expression (R.E):
 
