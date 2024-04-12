@@ -17,9 +17,33 @@ non-deterministic finite automaton (NFA) for this problem, as it can give us mor
 
 Seeing that our language is 
 Σ = a,b,c
-we will implement the automaton using q states, after designing it this is the result
+we will implement an automaton using q states, an automaton is a finite machine composed of different states, this machine helps us read a set of characters and determine what the final output will be, after designing it this is the result
 
 ![Automata evidence 1](https://github.com/Zathiald/automaton/assets/111139805/5dd46a2c-f45b-4341-9380-eff2b9601d73)
+
+One thing we must take into account is that because of the rules of the automaton we have some states that are not finite because if the sequence has one of the rules then it can't go to the end state.
+
+The automaton works in the following manner:
+
+| Starting State | Input | | Final State |
+| -------------- | ------| | ----------- |
+| Q0 | A | | Q1 |
+| Q0 | B | | Q4 |
+| Q0 | C | | Q0 |
+| Q1 | A | | Q1 |
+| Q1 | B | | Q2 |
+| Q1 | C | | Q0 |
+| Q2 | A | | Q1 |
+| Q2 | C | | Q3 |
+| Q4 | A | | Q1 |
+| Q4 | B | | Q5 |
+| Q4 | C | | Q7 |
+| Q5 | A | | Q6 |
+| Q5 | B | | Q4 |
+| Q5 | C | | Q7 |
+| Q7 | A | | Q1 |
+| Q7 | B | | Q4 |
+| Q7 | C | | Q0 |
 
 For further implementation are goint to transcribe the automaton to a Regular Expression (R.E):
 
@@ -59,6 +83,17 @@ The complexity for this system is O(n), that is because our regression system ne
 ## Testing
 The testing for this automaton is written on the file <strong>automaton_test.pl</strong>, but these were the results for it
 ![Automaton testing complete](https://github.com/Zathiald/automaton/assets/111139805/aeaa37f4-d924-4965-8690-beae39e9e860)
+
+## References
+These references were provided thanks to the documents in which the automatons are explained.
+
+Epita. (n.d.). An introduction to Prolog!. Boklm. Retrieved 24 March. 2024, from https://boklm.eu/prolog/page_6.html#61.
+
+Geeksforgeeks. (2023, June 27). Introduction of Finite Automata - GeeksforGeeks. Geeksforgeeks. Retrieved 24 March. 2024, from https://geeksforgeeks.org/introduction-of-finite-automata/.
+
+Treasure-Jones, T. (1996, October 8). Prolog Tutorial - Lists. Doc. Retrieved 24 March. 2024, from https://doc.gold.ac.uk/~mas02gw/prolog_tutorial/prologpages/lists.html.
+
+Warren, D. (1999, July 31). Grammars in Prolog. Stonybrook. Retrieved 24 March. 2024, from https://www3.cs.stonybrook.edu/~warren/xsbbook/node10.html.
 
 
 
