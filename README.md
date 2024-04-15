@@ -104,7 +104,7 @@ The testing for this automaton is written on the file <strong>automaton_test.pl<
 This automaton, altough functional, can certainly be improved, for example there are lenguages like Python,Java or Scala that could let me implement different algorithms and test them thoroughly and automatically, instead of having to first create the automaton, test by hand, then pass it over to prolog and test there if it works.
 
 For example Python, in order to implement it, according to Professor Thorsten Altenkirch of the University of Nottingham, python is a more open language in which you need to specify to the file what you are trying to do before even beggining to code. Although there are now python libraries such as automaton, this still need to be defined before starting to program. Here is an example of just the definition for an automaton in python:
-
+```
 from automaton import machines
 m = machines.FiniteMachine()
 m.add_state('up')
@@ -113,6 +113,7 @@ m.add_transition('down', 'up', 'jump')
 m.add_transition('up', 'down', 'fall')
 m.default_start_state = 'down'
 print(m.pformat())
+```
 
 Another option would be to use a Turing machine instead of an automaton, the Stanford Encyclopedia of Philosophy describes Turing machine as "simple abstract computational devices intended to help investigate the extent and limitations of what can be computed."(Stanford Encylopedia, 2018), the main difference between an automaton and a turing machine is that Turing machines are non-limited, meaning that our sequence could grow more and more and not have a limit, this could very well be another option instead of an automaton.
 
