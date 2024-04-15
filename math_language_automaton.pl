@@ -8,6 +8,9 @@ transition(q1,b,q2).
 transition(q2,a,q1).
 transition(q2,b,q4).
 transition(q2,c,q3).
+transition(q3,a,q3).
+transition(q3,b,q3).
+transition(q3,c,q3).
 transition(q4,a,q1).
 transition(q4,b,q5).
 transition(q4,c,q7).
