@@ -17,6 +17,9 @@ transition(q4,c,q7).
 transition(q5,a,q6).
 transition(q5,b,q4).
 transition(q5,c,q7).
+transition(q6,a,q6).
+transition(q6,b,q6).
+transition(q6,c,q6).
 transition(q7,a,q1).
 transition(q7,b,q4).
 transition(q7,c,q0).
