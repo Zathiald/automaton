@@ -17,11 +17,20 @@ non-deterministic finite automaton (NFA) for this problem, as it can give us mor
 
 Seeing that our language is 
 Σ = a,b,c
-we will implement an automaton using q states, an automaton is a finite machine composed of different states, this machine helps us read a set of characters and determine what the final output will be, after designing it this is the result
+we will implement an automaton using q states, an automaton, according to Stanford University is a "abstract models of machines that perform computations on an input by moving through a series of states or configurations." (Stanford University,2004)
 
+VERSION 1.0
 ![Automata evidence 1](https://github.com/Zathiald/automaton/assets/111139805/5dd46a2c-f45b-4341-9380-eff2b9601d73)
 
-One thing we must take into account is that because of the rules of the automaton we have some states that are not finite because if the sequence has one of the rules then it can't go to the end state.
+This was my fisrt version of the automaton, in this version I was missing the looping at the end, because of it I had finite states that didn't lead to nowhere, so I had to implement that for the future automaton.
+
+VERSION 2.0
+
+![Automaton 2 0](https://github.com/Zathiald/automaton/assets/111139805/4f623609-8fb1-4641-8799-e83b8ad85a8c)
+
+This is the second iteration of the automaton, now with everything it needs in order for it to work and not have finite unconclusive states.
+
+One thing we must take into account is that because of the rules of the automaton we have some states that are not finite and loop themselves because if the sequence has one of the rules then it can't go to the end state.
 
 The automaton works in the following manner:
 
@@ -35,12 +44,18 @@ The automaton works in the following manner:
 | Q1             | C     | Q0          |
 | Q2             | A     | Q1          |
 | Q2             | C     | Q3          |
+| Q3             | A     | Q3          |
+| Q3             | B     | Q3          |
+| Q3             | C     | Q3          |
 | Q4             | A     | Q1          |
 | Q4             | B     | Q5          |
 | Q4             | C     | Q7          |
 | Q5             | A     | Q6          |
 | Q5             | B     | Q4          |
 | Q5             | C     | Q7          |
+| Q6             | A     | Q6          |
+| Q6             | B     | Q6          |
+| Q6             | C     | Q6          |
 | Q7             | A     | Q1          |
 | Q7             | B     | Q4          |
 | Q7             | C     | Q0          |
@@ -88,16 +103,32 @@ The testing for this automaton is written on the file <strong>automaton_test.pl<
 ## Other Implementations
 This automaton, altough functional, can certainly be improved, for example there are lenguages like Python,Java or Scala that could let me implement different algorithms and test them thoroughly and automatically, instead of having to first create the automaton, test by hand, then pass it over to prolog and test there if it works.
 
+For example Python, in order to implement it, according to Professor Thorsten Altenkirch of the University of Nottingham, python is a more open language in which you need to specify to the file what you are trying to do before even beggining to code. Although there are now python libraries such as automaton, this still need to be defined before starting to program. Here is an example of just the definition for an automaton in python:
+
+from automaton import machines
+m = machines.FiniteMachine()
+m.add_state('up')
+m.add_state('down')
+m.add_transition('down', 'up', 'jump')
+m.add_transition('up', 'down', 'fall')
+m.default_start_state = 'down'
+print(m.pformat())
+
+Another option would be to use a Turing machine instead of an automaton, the Stanford Encyclopedia of Philosophy describes Turing machine as "simple abstract computational devices intended to help investigate the extent and limitations of what can be computed."(Stanford Encylopedia, 2018), the main difference between an automaton and a turing machine is that Turing machines are non-limited, meaning that our sequence could grow more and more and not have a limit, this could very well be another option instead of an automaton.
+
 ## References
-These references were provided thanks to the documents in which the automatons are explained.
 
-Epita. (n.d.). An introduction to Prolog!. Boklm. Retrieved 24 March. 2024, from https://boklm.eu/prolog/page_6.html#61.
+Academy, E. (2023, August 2). What is the main difference between linear bounded automata and Turing machines? - EITCA Academy. EITCA Academy. https://eitca.org/cybersecurity/eitc-is-cctf-computational-complexity-theory-fundamentals/decidability/linear-bound-automata/examination-review-linear-bound-automata/what-is-the-main-difference-between-linear-bounded-automata-and-turing-machines/ 
 
-Geeksforgeeks. (2023, June 27). Introduction of Finite Automata - GeeksforGeeks. Geeksforgeeks. Retrieved 24 March. 2024, from https://geeksforgeeks.org/introduction-of-finite-automata/.
+Basics of Automata Theory. (n.d.). https://cs.stanford.edu/people/eroberts/courses/soco/projects/2004-05/automata-theory/basics.html
 
-Treasure-Jones, T. (1996, October 8). Prolog Tutorial - Lists. Doc. Retrieved 24 March. 2024, from https://doc.gold.ac.uk/~mas02gw/prolog_tutorial/prologpages/lists.html.
+Computerphile. (2023, March 16). Automata & Python - Computerphile [Video]. YouTube. https://www.youtube.com/watch?v=32bC33nJR3A
 
-Warren, D. (1999, July 31). Grammars in Prolog. Stonybrook. Retrieved 24 March. 2024, from https://www3.cs.stonybrook.edu/~warren/xsbbook/node10.html.
+Examples — automaton 3.3.0.dev12 documentation. (n.d.). https://docs.openstack.org/automaton/latest/user/examples.html 
+
+Turing Machines (Stanford Encyclopedia of Philosophy). (2018, September 24). https://plato.stanford.edu/entries/turing-machine/
+
+
 
 
 
