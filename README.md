@@ -101,10 +101,11 @@ The testing for this automaton is written on the file <strong>automaton_test.pl<
 ![Automaton testing complete](https://github.com/Zathiald/automaton/assets/111139805/aeaa37f4-d924-4965-8690-beae39e9e860)
 
 ## Other Implementations
-This automaton, altough functional, can certainly be improved, for example there are lenguages like Python,Java or Scala that could let me implement different algorithms and test them thoroughly and automatically, instead of having to first create the automaton, test by hand, then pass it over to prolog and test there if it works.
+There are lenguages like Python,Java or Scala that could let me implement different algorithms and test them thoroughly and automatically.
 
 For example Python, in order to implement it, according to Professor Thorsten Altenkirch of the University of Nottingham, python is a more open language in which you need to specify to the file what you are trying to do before even beggining to code. Although there are now python libraries such as automaton, this still need to be defined before starting to program. Here is an example of just the definition for an automaton in python:
-```
+
+``` python
 from automaton import machines
 m = machines.FiniteMachine()
 m.add_state('up')
@@ -115,7 +116,11 @@ m.default_start_state = 'down'
 print(m.pformat())
 ```
 
-Another option would be to use a Turing machine instead of an automaton, the Stanford Encyclopedia of Philosophy describes Turing machine as "simple abstract computational devices intended to help investigate the extent and limitations of what can be computed."(Stanford Encylopedia, 2018), the main difference between an automaton and a turing machine is that Turing machines are non-limited, meaning that our sequence could grow more and more and not have a limit, this could very well be another option instead of an automaton.
+The difference between implementing an automaton between python and prolog is that prolog is designed in order to analyze languages and logic, so using prolog is the most efficient way to secure a good language analysis.
+
+Another option would be to use a Turing machine instead of an automaton, the Stanford Encyclopedia of Philosophy describes Turing machine as "simple abstract computational devices intended to help investigate the extent and limitations of what can be computed."(Stanford Encylopedia, 2018), the main difference between an automaton and a turing machine is that Turing machines are non-limited, meaning that our sequence could grow more and more and not have a limit.
+
+However this turing machines often scalate more and more and for this tipe of problem, which is more simple in comparison, a Turing machine would take more time to analyze and implement, rather than just using an automaton which is simpler and more efficient.
 
 ## References
 
